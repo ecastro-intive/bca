@@ -1,0 +1,72 @@
+[
+  {
+    "output": "```json\n[\n  \"transcendental idealism\",\n  \"space and time\",\n  \"forms of human sensibility\",\n  \"empiricism\",\n  \"epistemology\",\n  \"synthetic a priori judgments\",\n  \"categorical imperative\",\n  \"moral philosophy\",\n  \"ethics\",\n  \"maxims\",\n  \"universal laws\",\n  \"consequentialism\",\n  \"divine command\",\n  \"rational consistency\",\n  \"metaphysics\",\n  \"critical project\",\n  \"human knowledge\",\n  \"scientific objectivity\",\n  \"moral agency\",\n  \"phenomenal world\"\n]\n```",
+    "test_case": {
+      "prompt_inputs": {
+        "content": "Kant's transcendental idealism posits that space and time are not features of things-in-themselves but rather forms of human sensibility through which we structure experience. This framework fundamentally challenges the empiricist assumption that knowledge derives directly from external reality, instead proposing that the subject actively constitutes the phenomenal world through synthetic a priori judgments. The categorical imperative, as Kant's central ethical principle, demands that moral agents act only according to maxims they could rationally will as universal laws, thereby grounding ethics not in consequentialist outcomes or divine command but in the rational consistency of the agent's own will. These interconnected doctrines\u2014concerning epistemology, metaphysics, and moral philosophy\u2014collectively establish Kant's critical project, which seeks to delimit the scope of human knowledge while preserving both scientific objectivity and moral agency."
+      },
+      "solution_criteria": [
+        "Extracts all major philosophical concepts and theories mentioned (transcendental idealism, empiricism, synthetic a priori judgments, categorical imperative, etc.)",
+        "Identifies interconnected domains of inquiry (epistemology, metaphysics, ethics, moral philosophy)",
+        "Captures abstract theoretical frameworks without fragmenting them into overly granular or redundant subtopics",
+        "Returns output as a valid JSON array of strings"
+      ],
+      "task_description": "\n    Extract topics out of a passage of text from a scholarly article into a JSON array of strings\n    ",
+      "scenario": "Testing with a dense philosophy passage containing abstract concepts and multiple interconnected arguments to verify accurate topic extraction from nuanced, theory-heavy text"
+    },
+    "score": 8,
+    "reasoning": "The solution meets all mandatory requirements: it is a valid JSON array of strings containing topics from the passage with no extra commentary. It successfully extracts major philosophical concepts and identifies interconnected domains of inquiry. However, it has minor deficiencies in the secondary criterion regarding granularity\u2014some entries like 'forms of human sensibility' and 'maxims' represent sub-components of larger concepts rather than standing as independent topics. The solution errs slightly toward over-extraction rather than maintaining appropriate conceptual abstraction levels, though this is a minor issue that doesn't significantly impact overall quality."
+  },
+  {
+    "output": "```json\n[\n  \"Mitochondrial dysfunction\",\n  \"Neurodegenerative pathologies\",\n  \"Alzheimer's disease\",\n  \"Oxidative phosphorylation\",\n  \"Amyloid-beta accumulation\",\n  \"Tau hyperphosphorylation\",\n  \"High-resolution respirometry\",\n  \"Proteomics\",\n  \"Complex I deficiency\",\n  \"Complex IV deficiency\",\n  \"Hippocampal tissue\",\n  \"Transgenic mouse models\",\n  \"PGC-1\u03b1 signaling\",\n  \"Mitochondrial biogenesis\",\n  \"TFAM\",\n  \"Transcriptional control\",\n  \"Resveratrol\",\n  \"NAD+ levels\",\n  \"SIRT1\",\n  \"Deacetylation pathways\",\n  \"ATP production\",\n  \"Neuroinflammatory markers\",\n  \"TNF-\u03b1\",\n  \"IL-6\"\n]\n```",
+    "test_case": {
+      "prompt_inputs": {
+        "content": "Mitochondrial dysfunction has emerged as a critical factor in neurodegenerative pathologies, particularly in Alzheimer's disease where impaired oxidative phosphorylation exacerbates amyloid-beta accumulation and tau hyperphosphorylation. Our study utilized high-resolution respirometry and proteomics to characterize Complex I and Complex IV deficiencies in hippocampal tissue from transgenic mouse models. We identified dysregulation of the PGC-1\u03b1 signaling cascade, which normally orchestrates mitochondrial biogenesis through TFAM-mediated transcriptional control. Treatment with resveratrol-based compounds restored NAD+ levels and activated SIRT1-dependent deacetylation pathways, resulting in 67% improvement in ATP production and significant attenuation of neuroinflammatory markers including TNF-\u03b1 and IL-6."
+      },
+      "solution_criteria": [
+        "Extracts all major scientific topics and concepts without over-segmenting individual terms",
+        "Identifies domain-specific terminology as cohesive topics (e.g., 'mitochondrial dysfunction' as one topic, not separate terms)",
+        "Returns results as a JSON array of strings",
+        "Omits trivial words and focuses on substantive research concepts"
+      ],
+      "task_description": "\n    Extract topics out of a passage of text from a scholarly article into a JSON array of strings\n    ",
+      "scenario": "Testing with a biology research abstract using technical jargon and domain-specific terminology to ensure proper identification of scientific topics without over-segmentation"
+    },
+    "score": 9,
+    "reasoning": "The solution fully satisfies all mandatory requirements: it contains a valid JSON array of strings, each string is a topic without commentary, and the response contains only the JSON array. Regarding secondary criteria, the solution demonstrates strong adherence to identifying cohesive domain-specific topics and avoiding excessive segmentation. The extraction is substantive and research-focused. The only minor concern is whether some highly specific molecular markers (individual cytokines, transcription factors) represent 'major topics' versus supporting details, but in a scholarly article context, these are reasonably considered topics. The solution appropriately omits trivial words like 'has', 'emerged', 'our', etc. Overall, the solution meets the exact specifications outlined in the criteria."
+  },
+  {
+    "output": "```json\n[\n  \"Enlightenment\",\n  \"Revolutionary movements\",\n  \"Reason\",\n  \"Individual rights\",\n  \"Political discourse\",\n  \"Salon culture\",\n  \"Paris\",\n  \"Intellectuals\",\n  \"Aristocrats\",\n  \"Bourgeoisie\",\n  \"Democracy\",\n  \"Social reform\",\n  \"Industrial Revolution\",\n  \"Economic structures\",\n  \"Labor practices\",\n  \"Social tensions\",\n  \"Nationalist movements\",\n  \"Class dynamics\",\n  \"Technological innovation\",\n  \"Ancien r\u00e9gime\",\n  \"Nation-states\"\n]\n```",
+    "test_case": {
+      "prompt_inputs": {
+        "content": "The Enlightenment's influence on revolutionary movements cannot be overstated, as the philosophical emphasis on reason and individual rights fundamentally reshaped political discourse across Europe and the Americas. Salon culture in Paris became a crucial venue where intellectuals, aristocrats, and emerging bourgeoisie engaged with ideas about democracy and social reform. Simultaneously, the Industrial Revolution was transforming economic structures and labor practices, creating new social tensions that would later fuel nationalist movements throughout the nineteenth century. These interconnected developments\u2014intellectual ferment, changing class dynamics, and technological innovation\u2014collectively challenged the ancien r\u00e9gime's legitimacy and established the ideological foundations for modern nation-states."
+      },
+      "solution_criteria": [
+        "Extracts all major topics discussed in the passage, including intellectual movements, social institutions, and historical processes",
+        "Identifies topics that are implicit or embedded within narrative discourse rather than explicitly labeled",
+        "Returns results as a valid JSON array of strings"
+      ],
+      "task_description": "\n    Extract topics out of a passage of text from a scholarly article into a JSON array of strings\n    ",
+      "scenario": "Testing with a short humanities passage discussing historical events and cultural movements to assess topic extraction from narrative-driven text with implicit rather than explicit topic markers"
+    },
+    "score": 8,
+    "reasoning": "The solution fully satisfies all mandatory requirements: it is valid JSON containing only strings, with no extraneous commentary, and captures the essential topics from the passage. It demonstrates strong performance on secondary criteria by identifying major intellectual movements, social institutions, and historical processes. However, there are minor inefficiencies in topic selection\u2014some entries represent examples of broader categories rather than distinct topics, and one geographic reference dilutes the focus on conceptual topics. The omission of 'ideological foundations' as an explicit topic is a minor gap. These issues are not severe enough to warrant a score below 7, as the core extraction is sound and comprehensive."
+  },
+  {
+    "output": "```json\n[\n  \"behavioral economics\",\n  \"social preferences\",\n  \"cognitive biases\",\n  \"rational choice theory\",\n  \"consumer purchasing decisions\",\n  \"time-preference discounting\",\n  \"impulsivity\",\n  \"peer consumption patterns\",\n  \"social conformity\",\n  \"neurological mechanisms\",\n  \"temporal impatience\",\n  \"inequality-aversion\",\n  \"framing effects\",\n  \"competitive market transactions\",\n  \"distributional concerns\",\n  \"economic decision-making\",\n  \"microeconomic phenomena\",\n  \"cognitive constraints\",\n  \"interpersonal preferences\",\n  \"institutional structures\"\n]\n```",
+    "test_case": {
+      "prompt_inputs": {
+        "content": "Recent behavioral economics research reveals how social preferences and cognitive biases interact to shape market outcomes in ways traditional rational choice theory cannot explain. A longitudinal study examining consumer purchasing decisions found that individuals exhibiting high time-preference discounting\u2014a psychological trait linked to impulsivity\u2014were simultaneously more influenced by peer consumption patterns, suggesting that temporal impatience and social conformity operate through overlapping neurological mechanisms. Furthermore, when researchers introduced inequality-aversion manipulations through framing effects, participants demonstrated reduced willingness to engage in competitive market transactions, indicating that distributional concerns modulate economic decision-making. These findings challenge the assumption that economic behavior can be isolated from social psychological contexts, demonstrating instead that microeconomic phenomena emerge from the intersection of individual cognitive constraints, interpersonal preferences, and institutional structures."
+      },
+      "solution_criteria": [
+        "Extracts topics spanning economics, psychology, and social sciences domains",
+        "Identifies interdisciplinary concepts that resist simple categorical classification (e.g., behavioral economics, social preferences, cognitive biases)",
+        "Returns output as a valid JSON array of strings"
+      ],
+      "task_description": "\n    Extract topics out of a passage of text from a scholarly article into a JSON array of strings\n    ",
+      "scenario": "Testing with an interdisciplinary passage mixing economics, psychology, and social sciences to verify the prompt can handle topics that span multiple domains and resist simple categorical classification"
+    },
+    "score": 9,
+    "reasoning": "The solution fully satisfies all mandatory requirements: it is a valid JSON array of strings containing topics from the passage with no extra commentary. The response contains only the JSON array as required. Regarding secondary criteria, the extraction excellently spans multiple domains and identifies genuinely interdisciplinary concepts that resist simple categorization. The main minor weakness is inconsistent granularity\u2014some entries are high-level concepts while others are more specific phrases\u2014though this doesn't violate any stated criteria. The solution demonstrates strong understanding of the source material and appropriate topic extraction."
+  }
+]
